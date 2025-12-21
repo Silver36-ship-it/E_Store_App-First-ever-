@@ -194,6 +194,10 @@ const HomePage = () => {
             </div>
         </section>
 
+        <section>
+            <Footer />
+        </section>
+
 
 
         

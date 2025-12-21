@@ -5,27 +5,27 @@ import Category from "../pages/Category";
 import ProductCard from "../components/ProductCard";
 import ProductDetails from "../pages/ProductDetails";
 import MainLayout from "../layout/MainLayout";
-import App from "../App";
+
 
 const router = createBrowserRouter([
     {   
         path: "/",
-        element: <App />,
+        element: <MainLayout />,
         children: [
     {
         index: true,
         element:<HomePage />
     },
     {
-        path:"/cart",
+        path:"cart",
         element:<Cart />
     },
     {
-        path:"/category/:categoryName",
+        path:"category/:categoryName",
         element:<Category />
     },
     {
-        path:"/product/:id",
+        path:"product/:id",
         element:<ProductDetails />
     },
     ],
