@@ -22,12 +22,13 @@ const Navbar = () => {
                             SILVER.CO
                         </Link>
 
-                        <nav className="hidden lg:flex gap-6">
-                            <Link to="/shop" className="hover:text-gray-600">Shop</Link>
-                            <Link to="/sale" className="hover:text-gray-600">On Sale</Link>
-                            <Link to="/new" className="hover:text-gray-600">New Arrivals</Link>
-                            <Link to="/brands" className="hover:text-gray-600">Brands</Link>
+                        <nav className='hidden lg:flex gap-6'>
+                            <a href="#" className='hover:text-gray-600'>Shop</a>
+                            <a href="#" className='hover:text-gray-600'>On Sale</a>
+                            <a href="#" className='hover:text-gray-600'>New Arrivals</a>
+                            <a href='#' className='hover:text-gray-600'>Brands</a>
                         </nav>
+
                     </div>
 
                     <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2 flex-1 max-w-md mx-8">
