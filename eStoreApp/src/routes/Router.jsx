@@ -5,13 +5,15 @@ import Category from "../pages/Category";
 import ProductCard from "../components/ProductCard";
 import ProductDetails from "../pages/ProductDetails";
 import MainLayout from "../layout/MainLayout";
+import App from "../App";
 
 const router = createBrowserRouter([
-    {
-        element: <MainLayout/>,
+    {   
+        path: "/",
+        element: <App />,
         children: [
     {
-        path:"/",
+        index: true,
         element:<HomePage />
     },
     {
