@@ -1,2 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
 
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #17131f;
+  background: #f7f4fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(255, 147, 210, 0.24),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 92% 24%,
+      rgba(164, 210, 255, 0.24),
+      transparent 30rem
+    ),
+    #f7f4fb;
+}
+button,
+input {
+  font: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+.brand-mark {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.04em;
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 35px rgba(49, 32, 72, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 18px 50px rgba(67, 39, 92, 0.1),
+    inset 0 1px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.gradient-ink {
+  background: linear-gradient(135deg, #21182d 0%, #4d2c5d 48%, #e5529d 150%);
+}
+.juicy-button {
+  box-shadow: 0 12px 24px rgba(226, 67, 145, 0.27);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.juicy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(226, 67, 145, 0.36);
+}
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
