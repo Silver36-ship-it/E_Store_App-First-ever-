@@ -2,8 +2,8 @@ const Footer = () => {
   return (
     <footer className="gradient-ink text-white pt-16 pb-12 mt-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-5 gap-8 mb-12">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          <div className="md:col-span-2 lg:col-span-2">
             <h2 className="text-2xl font-bold mb-4">SILVER.CO</h2>
             <p className="text-white/65 text-sm mb-6 max-w-sm">
               We have clothes that suits your style and which you're proud to
@@ -100,9 +100,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/55 border-t border-white/15 pt-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-white/55 border-t border-white/15 pt-8">
           <p>Siler.co 2000-2026, All Rights Reserved</p>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             <div className="bg-white/10 px-3 py-2 rounded border border-white/15">
               Visa
             </div>

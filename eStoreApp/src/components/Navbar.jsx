@@ -1,10 +1,12 @@
-import { ShoppingCart, User, Search, Menu } from "lucide-react";
+import { useState } from "react";
+import { ShoppingCart, User, Search, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCartCount } from "../features/cart/CartSelectors";
 
 const Navbar = () => {
   const cartCount = useSelector(selectCartCount);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="border-b sticky top-0 z-50 glass-nav">
@@ -13,10 +15,19 @@ const Navbar = () => {
         <span className="underline cursor-pointer ml-2">Sign Up Now</span>
       </div>
 
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Menu className="lg:hidden cursor-pointer" />
+          <div className="flex items-center gap-3 sm:gap-8">
+            <button
+              type="button"
+              className="lg:hidden"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+              onClick={() => setIsMenuOpen((open) => !open)}
+            >
+              {isMenuOpen ? <X className="cursor-pointer" /> : <Menu className="cursor-pointer" />}
+            </button>
 
             <Link
               to="/"
@@ -74,6 +85,22 @@ const Navbar = () => {
             <User className="w-6 h-6 cursor-pointer hover:text-gray-600 transition" />
           </div>
         </div>
+        {isMenuOpen && (
+          <nav id="mobile-navigation" className="lg:hidden flex flex-col gap-4 pt-4 pb-2 text-sm font-medium">
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="hover:text-fuchsia-600 transition-colors">
+              Shop
+            </Link>
+            <a href="#new-arrivals" onClick={() => setIsMenuOpen(false)} className="hover:text-fuchsia-600 transition-colors">
+              New Arrivals
+            </a>
+            <a href="#styles" onClick={() => setIsMenuOpen(false)} className="hover:text-fuchsia-600 transition-colors">
+              Collections
+            </a>
+            <a href="#reviews" onClick={() => setIsMenuOpen(false)} className="hover:text-fuchsia-600 transition-colors">
+              Reviews
+            </a>
+          </nav>
+        )}
       </div>
     </header>
   );

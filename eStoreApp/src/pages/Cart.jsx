@@ -23,20 +23,20 @@ const Cart = () => {
 
         <div className="space-y-6">
             {cartItems.map((item)=>(
-                <div 
+                <div
                     key={item.id}
-                    className="flex items-center gap-6 border-b pb-6">
-                <img 
+                    className="flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-6 border-b pb-6">
+                <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-24 h-24 object-cover rounded-lg"/>
+                    className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-lg"/>
 
-                <div className="flex-1">
-                    <h2 className="font-semibold text-lg">{item.title}</h2>
+                <div className="flex-1 min-w-[calc(100%-5rem)] sm:min-w-0">
+                    <h2 className="font-semibold text-base sm:text-lg break-words">{item.title}</h2>
                     <p className="text-gray-600">${item.price}</p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 ml-auto">
                     <button
                         onClick={()=>
                             dispatch(
@@ -63,7 +63,7 @@ const Cart = () => {
                             </button>
                             </div>
 
-                            <div className="w-24 font-semibold">
+                            <div className="w-20 sm:w-24 font-semibold text-right">
                                 ${(item.price * item.quantity).toFixed(2)}
                                 </div>
                             <button

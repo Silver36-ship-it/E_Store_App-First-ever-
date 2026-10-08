@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
         <img
           src={product.thumbnail}
           alt={product.title}
-          className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-40 sm:h-52 object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <h2 className="mt-4 px-2 font-semibold text-sm line-clamp-2 min-h-10 group-hover:text-fuchsia-600 transition-colors">

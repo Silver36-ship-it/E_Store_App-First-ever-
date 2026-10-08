@@ -67,13 +67,13 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden">
-        <div className="container mx-auto px-4 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-white/60 border border-white px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-fuchsia-600 mb-6">
                 <Sparkles className="w-4 h-4" /> Curated for your vibe
               </div>
-              <h2 className="text-4xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
                 FIND CLOTHES
                 <br />
                 THAT MATCHES
@@ -92,32 +92,32 @@ const HomePage = () => {
                 Shop the drop <ArrowUpRight className="w-5 h-5" />
               </Link>
 
-              <div className="flex gap-8 mt-12 flex-wrap">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-6 sm:gap-8 mt-10 sm:mt-12">
                 <div>
                   <div className="text-3xl font-bold">200+</div>
                   <div className="text-gray-600 text-sm">Curated brands</div>
                 </div>
-                <div className="border-l pl-8">
+                <div className="border-l pl-4 sm:pl-8">
                   <div className="text-3xl font-bold">2,000+</div>
                   <div className="text-gray-600 text-sm">
                     High Quality Products
                   </div>
                 </div>
-                <div className="border-l pl-8">
+                <div className="border-l pl-4 sm:pl-8">
                   <div className="text-3xl font-bold">30,000+</div>
                   <div className="text-gray-600 text-sm">Happy Customers</div>
                 </div>
               </div>
             </div>
-            <div className="relative min-h-[28rem] flex items-center justify-center">
+            <div className="relative min-h-[22rem] sm:min-h-[28rem] flex items-center justify-center">
               <div className="absolute w-72 h-72 rounded-full bg-fuchsia-300/40 blur-3xl" />
-              <div className="glass-card relative rounded-[2.5rem] h-[30rem] w-full max-w-md overflow-hidden flex items-end justify-center">
+              <div className="glass-card group relative rounded-[2rem] sm:rounded-[2.5rem] h-[24rem] sm:h-[30rem] w-full max-w-md overflow-hidden flex items-end justify-center">
                 <img
                   src={homePics}
                   alt="Fashion models"
-                  className="relative z-10 max-w-none w-[145%] object-contain translate-y-10"
+                  className="relative z-10 h-full max-w-full object-contain object-bottom transition-transform duration-500 ease-out group-hover:scale-105"
                 />
-                <span className="absolute top-7 right-7 z-20 rounded-full bg-white/75 px-4 py-2 text-sm font-bold shadow-lg">
+                <span className="absolute top-4 right-4 sm:top-7 sm:right-7 z-20 rounded-full bg-white/75 px-3 sm:px-4 py-2 text-xs sm:text-sm font-bold shadow-lg">
                   #FreshFits
                 </span>
               </div>
@@ -130,7 +130,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center flex-wrap gap-8">
             {brands.map((brand) => (
-              <div key={brand} className="text-2xl font-bold">
+              <div key={brand} className="text-base sm:text-2xl font-bold">
                 {brand}
               </div>
             ))}
@@ -181,19 +181,19 @@ const HomePage = () => {
 
       <section
         id="styles"
-        className="glass-card rounded-[2.5rem] p-8 lg:p-16 container mx-auto px-4 py-16"
+        className="glass-card rounded-[2rem] sm:rounded-[2.5rem] container mx-auto px-4 py-10 sm:py-16"
       >
-        <div className="p-8 lg:p-16">
-          <h2 className="text-3xl font-bold text-center mb-12">
+        <div className="px-2 sm:px-8 lg:px-16 pt-2 sm:pt-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">
             BROWSE BY DRESS STYLE
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6">
           {BrowseByStyleimages.map((item) => (
             <Link
               key={item.category}
               to={`/category/${item.category}`}
-              className="relative h-80 rounded-xl overflow-hidden group"
+              className="relative h-44 sm:h-64 lg:h-80 rounded-xl overflow-hidden group"
             >
               <img
                 src={item.image}
@@ -202,7 +202,7 @@ const HomePage = () => {
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent p-6 flex items-end">
-                <span className="text-white text-2xl font-bold">
+                <span className="text-white text-lg sm:text-2xl font-bold">
                   {item.label}
                 </span>
               </div>

@@ -10,11 +10,11 @@ const Category = () => {
 
     if(error) return <p>Failed to load products</p>
     return ( 
-        <div className="p-8">
+        <div className="container mx-auto px-4 py-6 sm:py-8">
         <h1 className="text-2xl font-bold capitalize mb-6">
             {categoryName}</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {data.products.map(product =>(
                 <ProductCard key={product.id} product={product}/>
             ))}
